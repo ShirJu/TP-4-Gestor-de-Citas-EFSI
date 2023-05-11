@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Formulario from './Formulario';
+import ListadoCitas from './ListadoCitas';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="root">
+      <h1>ADMINISTRADOR DE PACIENTES</h1>
+      <div class="container">
+        <div class="row">
+          <div class="one-half column">
+            <h2>Crear mi Cita</h2>
+            <Formulario />
+          </div>
+          <div class="one-half column">
+            <h2>Administra tus citas</h2>
+            <ListadoCitas/>
+          </div>
+        </div>
+      </div>
     </div>
+
   );
 }
 
 export default App;
+
