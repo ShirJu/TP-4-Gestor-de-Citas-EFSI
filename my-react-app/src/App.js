@@ -1,8 +1,8 @@
 
 import './App.css';
-import Formulario from './Formulario.js';
-import Citas from './Citas.js';
-import ListadoCitas from './ListadoCitas.js';
+import Formulario from './Componentes/Formulario.js';
+import Citas from './Componentes/Citas.js';
+import ListadoCitas from './Componentes/ListadoCitas.js';
 
 function App() {
   const listado = [
