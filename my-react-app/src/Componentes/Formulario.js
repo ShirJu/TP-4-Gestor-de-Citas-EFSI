@@ -9,8 +9,6 @@ export default function Formulario({ onAgregarCita }) {
 
         e.preventDefault();
 
-       
-
         let newCita = {
 
             id: idState,
@@ -21,8 +19,6 @@ export default function Formulario({ onAgregarCita }) {
             sintomas: e.target.sintomas.value
         }
 
-       
-
         e.target.mascota.value = ''
         e.target.propietario.value = ''
         e.target.fecha.value = ''
@@ -30,7 +26,7 @@ export default function Formulario({ onAgregarCita }) {
         e.target.sintomas.value = ''
 
        onAgregarCita(newCita);
-        console.log(newCita);
+       console.log(newCita);
 
     }
 

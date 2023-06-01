@@ -6,8 +6,7 @@ import Citas from './Componentes/Citas';
 import ListadoCitas from './Componentes/ListadoCitas';
 
 function App() {
- 
-
+  
   const [ArrayCitas, setCitas] = useState([]);
 
   function AgregarCita (newCita) {
