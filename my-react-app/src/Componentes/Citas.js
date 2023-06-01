@@ -1,16 +1,40 @@
 import React from 'react'
 
-export default function Citas() {
+export default function Citas({citas}) {
+
     return (
+        
+       
         <>
-        <div className="cita">
-        <p>Dueño: <span>Martin</span></p>
-        <p>Fecha: <span>2021-08-05</span></p>
-        <p>Hora: <span>08:20</span></p>
-        <p>Sintomas: <span>Le duele la pierna</span></p>
-        <button className="button elimnar u-full-width">Eliminar </button>
-       </div>
-        </>
+
+        {citas.map(item => (
+        
+             <div className="cita" key={item.id}>
+         <div className="cita">
+        <p>Dueño: <span>{item.nomDueno}</span></p>
+        <p>Fecha: <span>{item.Fecha}</span></p>
+        <p>Hora: <span>{item.Hora}</span></p>
+        <p>Sintomas: <span>{item.Sintomas}</span></p>
+        <button className="button elimnar u-full-width">Eliminar </button>    </div>
+        </div>
+        ))}
+        
+                
+        
+
+ 
+    
+        
     )
-}
+    </>
+    )
+
+        }
+    
+
+    
+       
+       
+    
+
 
