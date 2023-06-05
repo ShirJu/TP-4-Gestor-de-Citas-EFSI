@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 export default function Formulario({ onAgregarCita }) {
 
+    //useState(0): estoy inicializando el id en 0
+    //estoy desestructurando useState en  idState y setId
     const [idState, setId] = useState(0);
 
     const CrearCita = (e) => {

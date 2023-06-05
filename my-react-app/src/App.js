@@ -6,7 +6,8 @@ import Citas from './Componentes/Citas';
 import ListadoCitas from './Componentes/ListadoCitas';
 
 function App() {
-  
+  //useState: estado del componente
+  //estoy desestructurando useState en  ArrayCitas (el array actual) y setId (el nuevo contenido a gregar)
   const [ArrayCitas, setCitas] = useState([]);
 
   function AgregarCita (newCita) {
@@ -26,6 +27,7 @@ function App() {
         <div className="row">
           <div className="one-half column">
             <h2>Crear mi Cita</h2>
+            //onAgregarCita es un objeto con el contenido en parametros
             <Formulario onAgregarCita={AgregarCita}/>
           </div>
           <div className="one-half column">
