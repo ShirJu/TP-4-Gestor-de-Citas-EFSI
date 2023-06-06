@@ -8,7 +8,7 @@ export default function Formulario({ onAgregarCita }) {
     const [idState, setId] = useState(0);
 
     const CrearCita = (e) => {
-
+        //Anula comportamineto natural de la pagina, no me saca de la pagina
         e.preventDefault();
 
         let newCita = {
@@ -29,7 +29,6 @@ export default function Formulario({ onAgregarCita }) {
 
        onAgregarCita(newCita);
        console.log(newCita);
-
     }
 
     return (

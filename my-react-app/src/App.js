@@ -20,20 +20,34 @@ function App() {
     );
   }
 
+  function EliminarCita(cita) {
+    const citasActualizadas = ArrayCitas.filter(c => c !== cita);
+    setCitas(citasActualizadas);
+  }
+
   return (
     <div id="root">
+
       <h1>ADMINISTRADOR DE PACIENTES</h1>
+
       <div className="container">
         <div className="row">
+
           <div className="one-half column">
             <h2>Crear mi Cita</h2>
-            //onAgregarCita es un objeto con el contenido en parametros
+
             <Formulario onAgregarCita={AgregarCita}/>
+
+            <ListadoCitas Citas={ArrayCitas}/>
           </div>
+
           <div className="one-half column">
+
             <h2> Administra tus citas</h2>
-            <Citas citas={ArrayCitas} />
+
+            <Citas citas={ArrayCitas} onEliminarCita={EliminarCita}/>
           </div>
+
         </div>
       </div>
     </div>

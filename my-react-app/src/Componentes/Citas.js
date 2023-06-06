@@ -13,7 +13,7 @@ export default function Citas({citas}) {
         <p>Fecha: <span>{item.fecha}</span></p>
         <p>Hora: <span>{item.hora}</span></p>
         <p>Sintomas: <span>{item.sintomas}</span></p>
-        <button className="button elimnar u-full-width">Eliminar </button>    </div>
+        <button onClick={()=> onEliminarCita(item.id)} className="button elimnar u-full-width">Eliminar</button> </div>
         </div>
         ))}
             
