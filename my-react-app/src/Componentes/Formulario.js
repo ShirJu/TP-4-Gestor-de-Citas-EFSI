@@ -40,7 +40,7 @@ export default function Formulario({ onAgregarCita }) {
             <input type="date" name="fecha" className="u-full-width" /><label>hora</label>
             <input type="time" name="hora" className="u-full-width" /><label>Sintomas</label>
             <textarea name="sintomas" className="u-full-width"></textarea>
-            <button type="submit" onClick={()=>  setId(idState + 1)} className="u-full-width button-primary" >Agregar Cita</button>
+            <button type="submit" onClick={()=>  setId(idState + 1)} className="u-full-width button-primary">Agregar Cita</button>
         </form>
     )
 }

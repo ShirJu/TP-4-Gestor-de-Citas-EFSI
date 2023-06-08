@@ -1,11 +1,11 @@
 import React from 'react'
 import Citas from './Citas'
 
-export default function ListadoCitas({Citas}) {
+export default function ListadoCitas({citas, onEliminarCita}) {
   return (
-    <div className="one-half column">
-      <Citas/>
-    </div>
+  
+      <Citas citas={citas} onEliminarCita={onEliminarCita}/>
+  
   ) 
 }
 

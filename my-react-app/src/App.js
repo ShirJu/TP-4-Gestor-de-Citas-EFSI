@@ -12,6 +12,7 @@ function App() {
 
   function AgregarCita (newCita) {
 
+    //creo una nueva cita compilando las anteriores con una nueva
     setCitas(
       [
         ...ArrayCitas,
@@ -19,12 +20,13 @@ function App() {
       ]
     );
   }
-
-  function EliminarCita(cita) {
-    const citasActualizadas = ArrayCitas.filter(c => c !== cita);
+  
+  function EliminarCita(id) {
+    
+    const citasActualizadas = ArrayCitas.filter(c => c.id !== id);
     setCitas(citasActualizadas);
   }
-
+  
   return (
     <div id="root">
 
@@ -34,18 +36,19 @@ function App() {
         <div className="row">
 
           <div className="one-half column">
+
             <h2>Crear mi Cita</h2>
 
             <Formulario onAgregarCita={AgregarCita}/>
 
-            <ListadoCitas Citas={ArrayCitas}/>
           </div>
 
           <div className="one-half column">
 
             <h2> Administra tus citas</h2>
 
-            <Citas citas={ArrayCitas} onEliminarCita={EliminarCita}/>
+            <ListadoCitas citas={ArrayCitas} onEliminarCita={EliminarCita}/>
+
           </div>
 
         </div>
