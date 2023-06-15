@@ -5,6 +5,7 @@ export default function Citas({citas,onEliminarCita}) {
     return (
         <>
         {citas.map(item => (
+            //key para identificarla
         <div className="cita" key={item.id}>
         
         <p>Mascota: <span>{item.nomMascota}</span></p>    

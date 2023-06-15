@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-
+//a mi componente le llega por parametro la funcion asignada a onAgregarCita
 export default function Formulario({ onAgregarCita }) {
 
     //useState(0): estoy inicializando el id en 0
@@ -9,10 +9,13 @@ export default function Formulario({ onAgregarCita }) {
 
     const CrearCita = (e) => {
         //Anula comportamineto natural de la pagina, no me saca de la pagina
+        //es para que no se reinicie y no borre los datos
         e.preventDefault();
 
+        // armo un objeto
         let newCita = {
 
+            //target es el formulario, name: mascota
             id: idState,
             nomMascota: e.target.mascota.value,
             nomDueno: e.target.propietario.value,
@@ -21,16 +24,19 @@ export default function Formulario({ onAgregarCita }) {
             sintomas: e.target.sintomas.value
         }
 
+        //reinicio los valores
         e.target.mascota.value = ''
         e.target.propietario.value = ''
         e.target.fecha.value = ''
         e.target.hora.value = ''
         e.target.sintomas.value = ''
 
+        //paso a la funcion pasada por parametros el objeto creado con los objetos del form
+        //recibo la funcion onAgregarCita y le mando newCita
        onAgregarCita(newCita);
        console.log(newCita);
     }
-
+// cuando aprieto el botton de tipo submit y a traves de e mando el evento de onSubmit
     return (
         <form onSubmit={(e) => CrearCita(e)}>
             <label>Nombre Mascota</label><input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota" />

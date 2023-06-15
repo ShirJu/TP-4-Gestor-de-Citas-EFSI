@@ -8,13 +8,18 @@ import ListadoCitas from './Componentes/ListadoCitas';
 function App() {
   //useState: estado del componente
   //estoy desestructurando useState en  ArrayCitas (el array actual) y setId (el nuevo contenido a gregar)
+
+  //variable ArrayCitas que le asigno useState([]) desde el inicio.
+  //setCitas es un modificador de ese valor
   const [ArrayCitas, setCitas] = useState([]);
 
+  //recibe newCita (objeto) de formulario
   function AgregarCita (newCita) {
 
-    //creo una nueva cita compilando las anteriores con una nueva
+    //llama al modificador
     setCitas(
       [
+        // agarro ArrayCitas que ya tiene un valor y le agrego newCita que llega por parametros
         ...ArrayCitas,
         newCita
       ]
@@ -27,6 +32,9 @@ function App() {
     setCitas(citasActualizadas);
   }
   
+  //viwe de la pantalla
+
+  //Line 49: llamo al componente  formulario que es hijo y le mando por prop la funcion AgregarCita
   return (
     <div id="root">
 
@@ -38,7 +46,7 @@ function App() {
           <div className="one-half column">
 
             <h2>Crear mi Cita</h2>
-
+            
             <Formulario onAgregarCita={AgregarCita}/>
 
           </div>

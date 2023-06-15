@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+// el componente padre es index y yo estoy importando el componente app (hijo)
 root.render(
   <React.StrictMode>
   <App/>
